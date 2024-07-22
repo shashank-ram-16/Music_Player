@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneTriumph</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TuneTriumph</h1>
+        <form id="search-form">
+            <input type="text" id="search-query" placeholder="Search for music">
+            <button type="button" id="search-button">Search</button>
+        </form>
+        <div id="results"></div>
+        
+        <div class="audio-controls">
+            <img id="thumbnail" src="" alt="Thumbnail" />
+            <button class="control-button" onclick="playPrevious()">&#9664;</button>
+            <button class="control-button" id="play-pause-button" onclick="togglePlayPause()">&#9658;</button>
+            <button class="control-button" onclick="playNext()">&#9654;</button>
+            <span id="current-time">0:00</span>
+            <input type="range" id="seek-bar" value="0" step="1" min="0">
+            <span id="total-time">0:00</span>
+            <audio id="audio-player" controls></audio>
+        </div>
+        <div id="playlist"></div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js" type="module"></script>
+    <script src="firebase-config.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+    
+</body>
+</html>

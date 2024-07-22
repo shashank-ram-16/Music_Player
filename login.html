@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.14.1/dist/full.css" rel="stylesheet">
+</head>
+<body class="bg-neutral text-green flex items-center justify-center h-screen">
+    <div class="w-full max-w-sm">
+        <div class="card bg-base-200 shadow-xl p-8">
+            <h1 class="text-3xl font-bold mb-4 text-center">Login</h1>
+            <div id="alert-container" class="mb-4 hidden">
+                <div id="alert" class="alert alert-error flex justify-between items-center">
+                    <span id="alert-message"></span>
+                    <button id="close-alert" class="btn btn-sm btn-error ml-4">X</button>
+                </div>
+            </div>
+            <div class="form-control mb-4">
+                <label class="label">
+                    <span class="label-text text-black">Username</span>
+                </label>
+                <input type="text" id="username" placeholder="Username" class="input input-bordered w-full">
+            </div>
+            <div class="form-control mb-4">
+                <label class="label">
+                    <span class="label-text text-black">Email</span>
+                </label>
+                <input type="email" id="email" placeholder="Email" class="input input-bordered w-full">
+            </div>
+            <div class="form-control mb-6">
+                <label class="label">
+                    <span class="label-text text-black">Password</span>
+                </label>
+                <div class="relative">
+                    <input type="password" id="password" placeholder="Password" class="input input-bordered w-full pr-10">
+                    <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400">
+                        <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="eyeOpen" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.06.168-.122.335-.188.502m-1.632 2.22A10.97 10.97 0 0112 19c-4.477 0-8.268-2.943-9.542-7-.06-.167-.122-.334-.188-.502"/>
+                        </svg>
+                        <svg id="eyeClosed" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M3.98 8.178a10.96 10.96 0 011.72-1.734M3 3l3 3m0 0a10.96 10.96 0 011.734-1.72m1.718-1.72L3 3m0 0L21 21M15 12a3 3 0 01-6 0 3 3 0 016 0zM21 21a10.96 10.96 0 01-1.734-1.72M12 5c4.477 0 8.268 2.943 9.542 7-.06.168-.122.335-.188.502m-1.632 2.22A10.97 10.97 0 0112 19c-4.477 0-8.268-2.943-9.542-7-.06-.167-.122-.334-.188-.502M9.172 9.172a4 4 0 015.656 5.656"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button id="login-btn" class="btn btn-primary w-full mb-4">Login</button>
+            <button id="signup-btn" class="btn btn-secondary w-full">Sign Up</button>
+        </div>
+    </div>
+    <script src="login.js" type="module"></script>
+</body>
+</html>
